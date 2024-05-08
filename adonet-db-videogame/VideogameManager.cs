@@ -10,9 +10,9 @@ using System.Xml.Linq;
 
 namespace adonet_db_videogame
 {
-    public class VideogameManager
+    public static class VideogameManager
     {
-        public void InserisciVideogame(Videogame videogame)
+        public static void InserisciVideogame(Videogame videogame)
         {
             string stringaDiConnsessione = "Data Source=localhost;Initial Catalog=Videogames;Integrated Security=True;";
 
@@ -41,7 +41,7 @@ namespace adonet_db_videogame
                 }
             }
         }
-        public void CercaPerId(int id)
+        public static void CercaPerId(int id)
         {
             string stringaDiConnsessione = "Data Source=localhost;Initial Catalog=Videogames;Integrated Security=True;";
             using SqlConnection connessioneSql = new SqlConnection(stringaDiConnsessione);
@@ -68,7 +68,7 @@ namespace adonet_db_videogame
                 Console.WriteLine(ex.Message);
             }
         }
-        public void RicercaPerStringa(string parola)
+        public static void RicercaPerStringa(string parola)
         {
             string stringaDiConnsessione = "Data Source=localhost;Initial Catalog=Videogames;Integrated Security=True;";
             using SqlConnection connessioneSql = new SqlConnection(stringaDiConnsessione);
@@ -94,7 +94,7 @@ namespace adonet_db_videogame
                 Console.WriteLine(ex.Message);
             }
         }
-        public void Delete(int id)
+        public static void Delete(int id)
         {
             string stringaDiConnsessione = "Data Source=localhost;Initial Catalog=Videogames;Integrated Security=True;";
 

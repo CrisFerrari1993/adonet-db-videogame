@@ -8,7 +8,6 @@
 
             while (userChoice != "esci")
             {
-                VideogameManager videogameManager = new VideogameManager(); 
                 Console.WriteLine("Scegli il tipo di operazione fra:");
                 Console.WriteLine("1 - inserire un nuovo videogioco");
                 Console.WriteLine("2 - ricercare un videogioco per id");
@@ -44,21 +43,21 @@
                             Console.Write("Inserisci id software house videogioco (numero intero): ");
                             int idSh = int.Parse(Console.ReadLine());
                             Videogame game = new(nome, overview, relase, create_at, update_at, idSh);
-                            videogameManager.InserisciVideogame(game);
+                            VideogameManager.InserisciVideogame(game);
                             break;
                         }
                     case "2":
                         {
                             Console.Write("Inserisci id videogioco(numero intero): ");
                             int id = int.Parse(Console.ReadLine());
-                            videogameManager.CercaPerId(id);
+                            VideogameManager.CercaPerId(id);
                             break;
                         }
                     case "3":
                         {
                             Console.Write("Inserisci qualsiasi frase o parola( in latino ;) ): ");
                             string parola =Console.ReadLine();
-                            videogameManager.RicercaPerStringa(parola);
+                            VideogameManager.RicercaPerStringa(parola);
                             break;
                             
                         }
@@ -66,7 +65,7 @@
                         {
                             Console.Write("Inserisci id videogioco(numero intero): ");
                             int id = int.Parse(Console.ReadLine());
-                            videogameManager.Delete(id);
+                            VideogameManager.Delete(id);
                             break;
                         }
                     case "5":
